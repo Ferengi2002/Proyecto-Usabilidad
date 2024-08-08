@@ -36,3 +36,26 @@ body {
   border: none;
   cursor: pointer;
 }
+
+
+  .input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .input-name {
+    width: 70%;
+    padding: 10px;
+    font-size: 1.2em;
+  }
+  
+  .play-button {
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: 50px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
