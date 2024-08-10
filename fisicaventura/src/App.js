@@ -4,24 +4,24 @@ import Header from './components/Header';
 import Scoreboard from './components/Scoreboard';
 import InputName from './components/InputName';
 import Footer from './components/Footer';
-import SecondScreen from './components/SecondScreen';
+import ErrorReportScreen from './components/ErrorReportScreen';
 import './App.css';
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <Header />
         <Routes>
           <Route path="/" element={
             <>
-              <Header />
               <Scoreboard />
               <InputName />
-              <Footer />
             </>
           } />
-          <Route path="/second-screen" element={<SecondScreen />} />
+          <Route path="/report-error" element={<ErrorReportScreen />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

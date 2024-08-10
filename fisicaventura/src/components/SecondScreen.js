@@ -1,13 +1,10 @@
 import React from 'react';
+import SuggestionsForm from './SuggestionsForm';
+import ErrorReportForm from './ErrorReportForm';
+import logoImage from '../assets/images/logo.png'; // Asegúrate de que el logo esté en esta ubicación
 
 const SecondScreen = () => {
-  return (
-    <div className="second-screen">
-      <h1>ABMODEL</h1>
-      <p>En ABMODEL, fusionamos la innovación con la accesibilidad para dar vida a experiencias digitales cautivadoras...</p>
-      {/* Aquí puedes agregar el resto del contenido de la segunda pantalla */}
-    </div>
-  );
+  
 };
 
 export default SecondScreen;
