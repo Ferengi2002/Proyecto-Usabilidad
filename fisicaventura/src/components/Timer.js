@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
 const Timer = () => {
-  const [seconds, setSeconds] = useState(0);
-  const [minutes, setMinutes] = useState(0);
+  const [time, setTime] = useState({ minutes: 0, seconds: 0 });
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setSeconds(prevSeconds => {
-        if (prevSeconds === 59) {
-          setMinutes(prevMinutes => prevMinutes + 1);
-          return 0;
+      setTime(prevTime => {
+        if (prevTime.seconds === 59) {
+          return { minutes: prevTime.minutes + 1, seconds: 0 };
         }
-        return prevSeconds + 1;
+        return { ...prevTime, seconds: prevTime.seconds + 1 };
       });
     }, 1000);
 
@@ -23,7 +21,9 @@ const Timer = () => {
   return (
     <div>
       <h3>Tiempo:</h3>
-      <h3 className='text-timer'>{formatTime(minutes)}:{formatTime(seconds)}</h3>
+      <h3 className='text-timer'>
+        {formatTime(time.minutes)}:{formatTime(time.seconds)}
+      </h3>
     </div>
   );
 };
