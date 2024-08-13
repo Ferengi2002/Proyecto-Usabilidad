@@ -1,20 +1,24 @@
+// InputName.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useUserName } from './UserName';
 import playButtonImage from '../assets/images/play-button.png';
 
 const InputName = () => {
-  const [name, setName] = useState('');
+  const [localName, setLocalName] = useState('');
+  const { setName } = useUserName();
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    setName(e.target.value);
+    setLocalName(e.target.value);
   };
 
   const handleSubmit = () => {
-    if (name.trim() !== '') {
-      navigate('/second-screen'); // Navega a la segunda pantalla
+    if (localName.trim() !== '') {
+      setName(localName);
+      navigate('/second-screen');
     } else {
-      alert('Por favor ingresa tu nombre'); // Mensaje opcional para asegurarse de que el nombre no esté vacío
+      alert('Por favor ingresa tu nombre');
     }
   };
 
@@ -23,7 +27,7 @@ const InputName = () => {
       <input
         type="text"
         placeholder="Ingresa Tu Nombre"
-        value={name}
+        value={localName}
         onChange={handleChange}
         className="input-name"
       />
