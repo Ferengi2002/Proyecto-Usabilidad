@@ -1,15 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SuggestionsForm from './SuggestionsForm';
 import ErrorReportForm from './ErrorReportForm';
-import logoImage from '../assets/images/logo.png'; // Asegúrate de que el logo esté en esta ubicación
+import logoImage from '../assets/images/logo.png';
 import SubHeader from './SubHeader';
+import Roulette from './Roulette';
 
 const SecondScreen = () => {
+    const [showRoulette, setShowRoulette] = useState(true);
+
+    const handleClose = () => {
+        setShowRoulette(false);
+        // Cuando se cierra la ruleta, se puede navegar aqui a otro componente
+    };
+    // Para que se muestre nuevamente la ruleta
+    const showRouletteAgain = () => {
+      setShowRoulette(true);
+  };
+
     return (
         <div>
-          <SubHeader /> {/* Llama al componente SubHeader aquí */}
+            <SubHeader />
+            {/* {showRoulette && <Roulette onClose={handleClose} />} */}
+                {/* Puedes agregar aquí otros componentes o lógica para mostrar 
+                cuando la ruleta esté cerrada */}
         </div>
-      );
+    );
 };
 
 export default SecondScreen;
