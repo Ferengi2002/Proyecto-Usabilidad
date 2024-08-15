@@ -56,7 +56,7 @@ const Roulette = ({ onClose }) => {
     if (!isSpinning && showResult) {
       final();
     }
-  }, [isSpinning, rotation, showResult]);
+  }, [isSpinning, rotation, showResult, final]);
 
   return (
     <div className='modal-overlay'>
