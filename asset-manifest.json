@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/Proyecto-Usabilidad/tree/main/fisicaventura/static/css/main.d1df50b9.css",
-    "main.js": "/Proyecto-Usabilidad/tree/main/fisicaventura/static/js/main.b98c1a14.js",
-    "static/js/453.bbdb584e.chunk.js": "/Proyecto-Usabilidad/tree/main/fisicaventura/static/js/453.bbdb584e.chunk.js",
-    "static/media/fondo.jpg": "/Proyecto-Usabilidad/tree/main/fisicaventura/static/media/fondo.fc322ab7955c7de87866.jpg",
-    "static/media/fondo-instrucciones.png": "/Proyecto-Usabilidad/tree/main/fisicaventura/static/media/fondo-instrucciones.53e9fc31adf2611658d4.png",
-    "static/media/correct.png": "/Proyecto-Usabilidad/tree/main/fisicaventura/static/media/correct.42f8ef48f312a33f8775.png",
-    "static/media/ruleta.png": "/Proyecto-Usabilidad/tree/main/fisicaventura/static/media/ruleta.db4a14dbcde167e2bc7f.png",
-    "static/media/logo.png": "/Proyecto-Usabilidad/tree/main/fisicaventura/static/media/logo.efcddabccd76ffab9178.png",
-    "static/media/incorrect.png": "/Proyecto-Usabilidad/tree/main/fisicaventura/static/media/incorrect.717ef06e1a54e5a38c13.png",
-    "static/media/close-icon.png": "/Proyecto-Usabilidad/tree/main/fisicaventura/static/media/close-icon.247456880f28432bd9de.png",
-    "static/media/close.png": "/Proyecto-Usabilidad/tree/main/fisicaventura/static/media/close.247456880f28432bd9de.png",
-    "static/media/boton.png": "/Proyecto-Usabilidad/tree/main/fisicaventura/static/media/boton.30674dfe62e26388ccf0.png",
-    "static/media/play-button.png": "/Proyecto-Usabilidad/tree/main/fisicaventura/static/media/play-button.30674dfe62e26388ccf0.png",
-    "static/media/fondo-pregunta.png": "/Proyecto-Usabilidad/tree/main/fisicaventura/static/media/fondo-pregunta.d80ff24f2e3e9a309135.png",
-    "static/media/feedback.png": "/Proyecto-Usabilidad/tree/main/fisicaventura/static/media/feedback.adbe11f820e0edab58aa.png",
-    "static/media/personajeInstruciones.png": "/Proyecto-Usabilidad/tree/main/fisicaventura/static/media/personajeInstruciones.a74f3bd9a76f098f399a.png",
-    "static/media/flecha.png": "/Proyecto-Usabilidad/tree/main/fisicaventura/static/media/flecha.5398d778c53780b46ea2.png",
-    "index.html": "/Proyecto-Usabilidad/tree/main/fisicaventura/index.html",
-    "main.d1df50b9.css.map": "/Proyecto-Usabilidad/tree/main/fisicaventura/static/css/main.d1df50b9.css.map",
-    "main.b98c1a14.js.map": "/Proyecto-Usabilidad/tree/main/fisicaventura/static/js/main.b98c1a14.js.map",
-    "453.bbdb584e.chunk.js.map": "/Proyecto-Usabilidad/tree/main/fisicaventura/static/js/453.bbdb584e.chunk.js.map"
+    "main.css": "/Proyecto-Usabilidad/fisicaventura/static/css/main.cbf37949.css",
+    "main.js": "/Proyecto-Usabilidad/fisicaventura/static/js/main.cfd9589a.js",
+    "static/js/453.bbdb584e.chunk.js": "/Proyecto-Usabilidad/fisicaventura/static/js/453.bbdb584e.chunk.js",
+    "static/media/fondo.jpg": "/Proyecto-Usabilidad/fisicaventura/static/media/fondo.fc322ab7955c7de87866.jpg",
+    "static/media/fondo-instrucciones.png": "/Proyecto-Usabilidad/fisicaventura/static/media/fondo-instrucciones.53e9fc31adf2611658d4.png",
+    "static/media/correct.png": "/Proyecto-Usabilidad/fisicaventura/static/media/correct.42f8ef48f312a33f8775.png",
+    "static/media/ruleta.png": "/Proyecto-Usabilidad/fisicaventura/static/media/ruleta.db4a14dbcde167e2bc7f.png",
+    "static/media/logo.png": "/Proyecto-Usabilidad/fisicaventura/static/media/logo.efcddabccd76ffab9178.png",
+    "static/media/incorrect.png": "/Proyecto-Usabilidad/fisicaventura/static/media/incorrect.717ef06e1a54e5a38c13.png",
+    "static/media/close-icon.png": "/Proyecto-Usabilidad/fisicaventura/static/media/close-icon.247456880f28432bd9de.png",
+    "static/media/close.png": "/Proyecto-Usabilidad/fisicaventura/static/media/close.247456880f28432bd9de.png",
+    "static/media/boton.png": "/Proyecto-Usabilidad/fisicaventura/static/media/boton.30674dfe62e26388ccf0.png",
+    "static/media/play-button.png": "/Proyecto-Usabilidad/fisicaventura/static/media/play-button.30674dfe62e26388ccf0.png",
+    "static/media/fondo-pregunta.png": "/Proyecto-Usabilidad/fisicaventura/static/media/fondo-pregunta.d80ff24f2e3e9a309135.png",
+    "static/media/feedback.png": "/Proyecto-Usabilidad/fisicaventura/static/media/feedback.adbe11f820e0edab58aa.png",
+    "static/media/personajeInstruciones.png": "/Proyecto-Usabilidad/fisicaventura/static/media/personajeInstruciones.a74f3bd9a76f098f399a.png",
+    "static/media/flecha.png": "/Proyecto-Usabilidad/fisicaventura/static/media/flecha.5398d778c53780b46ea2.png",
+    "index.html": "/Proyecto-Usabilidad/fisicaventura/index.html",
+    "main.cbf37949.css.map": "/Proyecto-Usabilidad/fisicaventura/static/css/main.cbf37949.css.map",
+    "main.cfd9589a.js.map": "/Proyecto-Usabilidad/fisicaventura/static/js/main.cfd9589a.js.map",
+    "453.bbdb584e.chunk.js.map": "/Proyecto-Usabilidad/fisicaventura/static/js/453.bbdb584e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1df50b9.css",
-    "static/js/main.b98c1a14.js"
+    "static/css/main.cbf37949.css",
+    "static/js/main.cfd9589a.js"
   ]
 }
