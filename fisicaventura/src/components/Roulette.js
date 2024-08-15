@@ -59,7 +59,9 @@ const Roulette = ({ onClose }) => {
   }, [isSpinning, rotation, showResult]);
 
   return (
-    <div className='plafon'>
+    <div className='modal-overlay'>
+      <div className='modal-content'>
+      <div className='plafon'>
       <div className='close-button-container'> 
         <button 
           className='close-button' 
@@ -90,6 +92,9 @@ const Roulette = ({ onClose }) => {
       </div>
       <div className='flecha'>
         <img src={flechaImage} alt='flecha'/>
+      </div>
+    </div>
+
       </div>
     </div>
   );

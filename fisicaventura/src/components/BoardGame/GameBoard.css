@@ -3,7 +3,7 @@
     width: 605px;
     height: 800px;
     background-color: none;
-    border: 2px solid #333;
+    
 }
 
 .start-cell {
@@ -12,7 +12,7 @@
     height: 100px;
     background-image: url('https://i.ibb.co/3dhMkgS/celda-inicio.png');
     background-size: cover;
-    border: 1px solid #999;
+    
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -28,7 +28,7 @@
     height: 100px;
     background-image: url('https://i.ibb.co/TTjSWL0/celda-fin.png');
     background-size: cover;
-    border: 1px solid #999;
+    
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -46,7 +46,7 @@
     height: 100px;
     background-image: url('https://i.ibb.co/H70p1jV/casilla.png');
     background-size: cover;
-    border: 1px solid #999;
+    
     box-sizing: border-box;
     display: flex;
     align-items: center;

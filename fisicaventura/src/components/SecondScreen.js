@@ -36,17 +36,6 @@ const SecondScreen = () => {
         setShowQuestion(false);
     };
 
-    // Datos de ejemplo para la pregunta
-    const question = {
-        number: 2,
-        text: "¿Qué es el periodo en física?",
-        options: [
-            "Es el número de vueltas que gira en segundos",
-            "Es el tiempo que tarda el cuerpo en dar una vuelta completa",
-            "Es la magnitud física de carácter vectorial",
-        ],
-        correctOption: "Es el tiempo que tarda el cuerpo en dar una vuelta completa",
-    };
 /*
     const handleClose = () => {
         setShowRoulette(false);
@@ -77,12 +66,7 @@ const SecondScreen = () => {
                 
                 </div>
                 {showRoulette && <Roulette onClose={handleRouletteClose} />}
-                {showQuestion && <Question 
-                questionNumber={question.number}
-                questionText={question.text}
-                questionImage={question.image}
-                options={question.options}
-                correctOption={question.correctOption}                
+                {showQuestion && <Question                 
                 onResult={handleQuestionResult} />}
 
                 
@@ -94,7 +78,7 @@ const SecondScreen = () => {
             <Instructions />
             
             {/* Componente para mostrar la pregunta cargada */}
-            <Question />
+            
         </div>
     );
 };
