@@ -5,20 +5,9 @@ import logoImage from '../assets/images/logo.png';
 import SubHeader from './SubHeader';
 import Roulette from './Roulette';
 import Instructions from './Instructions';
-import Roulette from './Roulette';
-import Instructions from './Instructions';
+
 
 const SecondScreen = () => {
-    const [showRoulette, setShowRoulette] = useState(true);
-
-    const handleClose = () => {
-        setShowRoulette(false);
-        // Cuando se cierra la ruleta, se puede navegar aqui a otro componente
-    };
-    // Para que se muestre nuevamente la ruleta
-    const showRouletteAgain = () => {
-      setShowRoulette(true);
-  };
 
     const [showRoulette, setShowRoulette] = useState(true);
 
@@ -38,13 +27,7 @@ const SecondScreen = () => {
                 {/* Puedes agregar aquí otros componentes o lógica para mostrar 
                 cuando la ruleta esté cerrada */}
             <Instructions/>
-            <SubHeader />
-            {/* {showRoulette && <Roulette onClose={handleClose} />} */}
-                {/* Puedes agregar aquí otros componentes o lógica para mostrar 
-                cuando la ruleta esté cerrada */}
-            <Instructions/>
         </div>
-    );
     );
 };
 
