@@ -147,11 +147,10 @@ footer a:hover {
 /*ESTILOS DE EL COMPONENTE QUESTION*/
 .question-container {
   background: url('./assets/images/fondo-pregunta.png'); /* Usa la imagen de fondo adecuada */
-  background-size: contain; /* Asegura que la imagen se ajuste completamente dentro del contenedor */
   background-size: cover; /* Esto hará que la imagen cubra todo el contenedor */
-  width: 100%; /* Ajusta esto al tamaño que mejor se ajuste */
+  width: 100%; 
   max-width: 515px;
-  height: 500px; /* Ajusta esto al tamaño que mejor se ajuste */
+  height: 500px; 
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -160,8 +159,7 @@ footer a:hover {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  position: relative;
-  left: 650px;
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
 }
 
 .question-header {
@@ -184,37 +182,35 @@ footer a:hover {
 
 .question-text {
   margin-top: 20px;
-  margin-left: 30px;
   font-size: 1.2em;
   color: #333;
+  text-align: center; /* Asegura que el texto de la pregunta esté centrado */
 }
 
 .options-container {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra las opciones horizontalmente */
+  align-items: center;
   gap: 10px; /* Espaciado entre las opciones */
-  width: 100%; /* Asegura que el contenedor de opciones abarque el ancho completo */
-  max-width: 500px; /* Puedes ajustar este valor según el diseño general */
+  width: 100%;
 }
 
 .option {
   background-color: #a7d8f5; /* Color de fondo de las opciones */
-  width: 100%; /* Asegura que la opción abarque el 100% del contenedor padre */
-  max-width: 450px; /* Ajusta según el tamaño de tu diseño */
+  width: 100%;
+  max-width: 450px;
   padding: 15px;
   border-radius: 10px;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center; /* Centra el texto horizontalmente */
+  text-align: center;
   font-size: 1em;
-  color: #333; /* Color del texto */
-  box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-  margin: 0 auto; /* Centra horizontalmente en el contenedor */
-  transition: background-color 0.3s ease; /* Transición suave al pasar el mouse */
+  color: #333;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
 }
 
 .option:hover {
@@ -256,23 +252,21 @@ footer a:hover {
 
 .ok-button {
   position: absolute;
-  bottom: 100px; /* Ajusta este valor para mover el botón hacia arriba o hacia abajo */
+  bottom: 20px; /* Ajusta este valor para mover el botón hacia arriba o hacia abajo */
   padding: 10px 20px;
   background-color: #81c2f2;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translateX(-50%);
   left: 50%; /* Centra el botón horizontalmente dentro del contenedor */
+  transform: translateX(-50%);
 }
 
 .ok-button:hover {
   background-color: #0000ff;
 }
+
 
 /*ESTILOS DE LA PANTALLA FEEDBACK*/
 

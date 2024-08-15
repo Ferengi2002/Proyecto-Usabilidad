@@ -1,18 +1,67 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App.css';
 import Feedback from './Feedback'; // Importa el nuevo componente de retroalimentación
 import correctImage from '../assets/images/correct.png'; // Reemplaza con la ruta correcta de tu imagen
 import incorrectImage from '../assets/images/incorrect.png'; // Reemplaza con la ruta correcta de tu imagen
 
+function parseQuestions(data) {
+  const questionsArray = data.split('\n\n').map(questionBlock => {
+      const lines = questionBlock.split('\n').filter(line => line.trim() !== '');
+      
+      const questionText = lines[0]; // La primera línea es la pregunta
+      
+      const options = lines.slice(1, lines.length - 1).filter(option => !option.startsWith('Respuesta')); // Filtra las líneas que no sean la respuesta
 
-const Question = ({ questionNumber, questionText, questionImage, options, correctOption }) => {
+      const correctOption = lines[lines.length - 1].replace('Respuesta', '').trim(); // Última línea es la respuesta correcta
+
+      return {
+          questionText: questionText.trim(),
+          options: options.map(option => option.trim()), // Asegúrate de recortar las opciones
+          correctOption: correctOption.trim()
+      };
+  });
+
+  return questionsArray;
+}
+
+
+
+const escapeHTML = (text) => {
+  const div = document.createElement('div');
+  div.innerText = text;
+  return div.innerHTML;
+};
+
+const Question = () => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
   const [showFeedback, setShowFeedback] = useState(false); // Estado para mostrar u ocultar el feedback
+  const [question, setQuestion] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    fetch('/questions.txt')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(text => {
+            console.log(text); // Agrega esto para verificar el contenido
+            const parsedQuestions = parseQuestions(text);
+            const randomQuestion = parsedQuestions[Math.floor(Math.random() * parsedQuestions.length)];
+            setQuestion(randomQuestion);
+        })
+        .catch(error => {
+            console.error('Error cargando el archivo:', error);
+            setError('Error cargando las preguntas. Por favor intenta de nuevo más tarde.');
+        });
+}, []);
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
-    setIsAnswerCorrect(option === correctOption);
+    setIsAnswerCorrect(option === question.correctOption);
   };
 
   const handleOkClick = () => {
@@ -28,15 +77,23 @@ const Question = ({ questionNumber, questionText, questionImage, options, correc
     setShowFeedback(false);
   };
 
+  if (error) {
+    return <div>{error}</div>;
+  }
+
+  if (!question) {
+    return <div>Cargando pregunta...</div>;
+  }
+
   return (
     <div className="question-container">
       <div className="question-header">
-        <div className="question-number">Pregunta {questionNumber}</div>
-        {questionImage && <img src={questionImage} alt="Pregunta" className="question-image" />}
+        <div className="question-number">Pregunta</div>
+        {question.questionImage && <img src={question.questionImage} alt="Pregunta" className="question-image" />}
       </div>
-      <div className="question-text">{questionText}</div>
+      <div className="question-text">{question.questionText}</div>
       <div className="options-container">
-        {options.map((option, index) => (
+        {question.options.map((option, index) => (
           <div
             key={index}
             className="option"
