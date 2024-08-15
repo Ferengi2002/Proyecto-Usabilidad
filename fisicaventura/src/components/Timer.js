@@ -1,20 +1,24 @@
 import React, { useEffect, useState } from 'react';
 
-const Timer = () => {
+const Timer = ({ isGameFinished, onGameFinish }) => {
   const [time, setTime] = useState({ minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTime(prevTime => {
-        if (prevTime.seconds === 59) {
-          return { minutes: prevTime.minutes + 1, seconds: 0 };
-        }
-        return { ...prevTime, seconds: prevTime.seconds + 1 };
-      });
-    }, 1000);
+    if (!isGameFinished) {
+      const timer = setInterval(() => {
+        setTime(prevTime => {
+          if (prevTime.seconds === 59) {
+            return { minutes: prevTime.minutes + 1, seconds: 0 };
+          }
+          return { ...prevTime, seconds: prevTime.seconds + 1 };
+        });
+      }, 1000);
 
-    return () => clearInterval(timer);
-  }, []);
+      return () => clearInterval(timer);
+    } else if (isGameFinished && onGameFinish) {
+      onGameFinish(time);
+    }
+  }, [isGameFinished, onGameFinish]);
 
   const formatTime = (time) => time < 10 ? `0${time}` : time;
 
