@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/PaginaSugerencias.css';
 
 const ErrorReportForm = () => {
   const [errorReport, setErrorReport] = useState('');
@@ -14,10 +15,9 @@ const ErrorReportForm = () => {
   };
 
   return (
-    <div className="form-container">
+    <div className="form-container" style={{ width: '400px', height: '240px' }}>
       <p>
-        Si encontró algún error dentro del juego, puede comunicarse dentro de
-        nuestros canales oficiales o escribirlo en la caja de texto
+        Si encontró algún error, repórtelo en nuestros canales oficiales o en la caja de texto.
       </p>
       <form onSubmit={handleSubmit}>
         <textarea

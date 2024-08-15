@@ -1,4 +1,6 @@
 import React from 'react';
+import '../styles/PaginaPrincipal.css';
+
 
 const Scoreboard = () => {
   const scores = [

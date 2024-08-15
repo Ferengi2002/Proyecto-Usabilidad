@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import '../styles/Timer.css'
+
 
 const Timer = ({ isGameFinished, onGameFinish }) => {
   const [time, setTime] = useState({ minutes: 0, seconds: 0 });
