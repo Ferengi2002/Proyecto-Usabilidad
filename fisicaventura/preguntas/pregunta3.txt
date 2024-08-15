@@ -1,0 +1,10 @@
+¿Qué es el Movimiento Rectilíneo Uniformemente Variado (MRUV)?
+
+a) Un movimiento en el que la aceleración es constante y la velocidad cambia con el tiempo. 
+b) Un movimiento en el que la aceleración varía.
+c) Un movimiento en el que la velocidad es constante.
+d) Un movimiento en el que la posición no cambia.
+
+Respuesta A
+
+Video: https://www.youtube.com/watch?v=qktO5wkcnu4

@@ -1,0 +1,14 @@
+Dos automóviles salen al mismo tiempo de dos ciudades, A y B, separadas por una distancia de 192 km.
+El primer automóvil sale de A hacia B a 75 km/h. El segundo sale de B hacia A a 85 km/h.
+Calcula el instante en el que se encuentran
+
+A) Se encuentran en 2 horas 
+B) Se encuentran en 1 hora
+C) Se encuentran en 1.2 horas
+D) Se encuentran en 2.4 horas
+
+
+Respuesta C
+
+
+Video: https://www.youtube.com/watch?v=PoMw9Rfh088
