@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/PaginaSugerencias.css';
 
 const ErrorReportForm = () => {
   const [errorReport, setErrorReport] = useState('');
