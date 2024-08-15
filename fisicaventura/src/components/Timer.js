@@ -25,12 +25,12 @@ const Timer = ({ isGameFinished, onGameFinish }) => {
   const formatTime = (time) => time < 10 ? `0${time}` : time;
 
   return (
-    <div>
-      <h3>Tiempo:</h3>
-      <h3 className='text-timer'>
-        {formatTime(time.minutes)}:{formatTime(time.seconds)}
-      </h3>
-    </div>
+  <div tabindex="0">
+    <h3 tabindex="0">Tiempo:</h3>
+    <h3 className='text-timer' tabindex="0">
+      {formatTime(time.minutes)}:{formatTime(time.seconds)}
+    </h3>
+  </div>
   );
 };
 
