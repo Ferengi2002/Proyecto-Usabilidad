@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import '../styles/Instrucciones.css';
 import PersonajePhoto from '../assets/images/personajeInstruciones.png'
 import closeImage from '../assets/images/close.png';
+
 
 const Instructions = () => {
     const [isOpen, setIsOpen]=useState(false)

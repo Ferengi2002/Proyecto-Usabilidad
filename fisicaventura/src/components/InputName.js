@@ -1,6 +1,7 @@
 // InputName.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../styles/PaginaPrincipal.css';
 import { useUserName } from './UserName';
 import playButtonImage from '../assets/images/play-button.png';
 
