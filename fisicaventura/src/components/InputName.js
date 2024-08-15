@@ -26,7 +26,7 @@ const InputName = () => {
     <div className="input-container">
       <input
         type="text"
-        placeholder="Ingresa Tu Nombre"
+        placeholder="Ingresa tu nombre"
         value={localName}
         onChange={handleChange}
         className="input-name"

@@ -9,6 +9,7 @@ const Scoreboard = () => {
   ];
 
   return (
+    <div className="scoreboard-container">
     <div className="scoreboard">
       <table>
         <thead>
@@ -27,6 +28,7 @@ const Scoreboard = () => {
         </tbody>
       </table>
     </div>
+  </div>
   );
 };
 
