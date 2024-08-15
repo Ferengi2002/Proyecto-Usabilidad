@@ -1,0 +1,14 @@
+.second-screen {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+  }
+  
+  .game-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Opcional: ajusta el ancho según lo necesites */
+  }
+  

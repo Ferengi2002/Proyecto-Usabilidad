@@ -49,6 +49,7 @@ const Roulette = ({ onClose }) => {
     }
   
     setResultado(casillas);
+    onClose(casillas);
   }
 
   useEffect(() => {

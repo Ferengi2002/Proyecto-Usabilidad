@@ -5,7 +5,7 @@ import correctImage from '../assets/images/correct.png'; // Reemplaza con la rut
 import incorrectImage from '../assets/images/incorrect.png'; // Reemplaza con la ruta correcta de tu imagen
 
 
-const Question = ({ questionNumber, questionText, questionImage, options, correctOption }) => {
+const Question = ({ questionNumber, questionText, questionImage, options, correctOption, onResult }) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
   const [showFeedback, setShowFeedback] = useState(false); // Estado para mostrar u ocultar el feedback
@@ -13,6 +13,7 @@ const Question = ({ questionNumber, questionText, questionImage, options, correc
   const handleOptionClick = (option) => {
     setSelectedOption(option);
     setIsAnswerCorrect(option === correctOption);
+    onResult(option === correctOption); // Llama a la función onResult con el resultado
   };
 
   const handleOkClick = () => {
