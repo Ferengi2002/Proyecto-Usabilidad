@@ -20,7 +20,7 @@ const Timer = ({ isGameFinished, onGameFinish }) => {
     } else if (isGameFinished && onGameFinish) {
       onGameFinish(time);
     }
-  }, [isGameFinished, onGameFinish]);
+  }, [isGameFinished, onGameFinish, time]);
 
   const formatTime = (time) => time < 10 ? `0${time}` : time;
 

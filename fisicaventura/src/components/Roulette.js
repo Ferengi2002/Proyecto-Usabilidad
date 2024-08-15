@@ -49,7 +49,7 @@ const Roulette = ({ onClose }) => {
     }
   
     setResultado(casillas);
-    onClose(casillas);
+    onClose(casillas); // Llama a onClose con el número de casillas
   }
 
   useEffect(() => {
@@ -65,7 +65,7 @@ const Roulette = ({ onClose }) => {
       <div className='close-button-container'> 
         <button 
           className='close-button' 
-          onClick={onClose} 
+          onClick={() => onClose(resultado)} // Asegúrate de que el botón de cerrar también llama a onClose con el resultado
           disabled={isSpinning || !showResult}
         >
           <img src={closeImage} alt="Cerrar" />
@@ -79,7 +79,7 @@ const Roulette = ({ onClose }) => {
       </div>
       <div className='resultado-container' style={{ minHeight: '50px' }}>
         {showResult ? (
-          <button className='resultado-button' onClick={onClose}>
+          <button className='resultado-button' onClick={() => onClose(resultado)}>
           {resultado !== '' && `Avanza ${resultado} casillas`}
         </button>
         ) : (

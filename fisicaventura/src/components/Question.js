@@ -24,18 +24,10 @@ function parseQuestions(data) {
   return questionsArray;
 }
 
-
-
-const escapeHTML = (text) => {
-  const div = document.createElement('div');
-  div.innerText = text;
-  return div.innerHTML;
-};
-
-const Question = ({ onResult }) => {
+const Question = ({ onAnswered }) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
-  const [showFeedback, setShowFeedback] = useState(false); // Estado para mostrar u ocultar el feedback
+  const [showFeedback, setShowFeedback] = useState(false);
   const [question, setQuestion] = useState(null);
   const [error, setError] = useState(null);
 
@@ -48,7 +40,6 @@ const Question = ({ onResult }) => {
             return response.text();
         })
         .then(text => {
-            console.log(text); // Agrega esto para verificar el contenido
             const parsedQuestions = parseQuestions(text);
             const randomQuestion = parsedQuestions[Math.floor(Math.random() * parsedQuestions.length)];
             setQuestion(randomQuestion);
@@ -57,12 +48,13 @@ const Question = ({ onResult }) => {
             console.error('Error cargando el archivo:', error);
             setError('Error cargando las preguntas. Por favor intenta de nuevo más tarde.');
         });
-}, []);
+  }, []);
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
-    setIsAnswerCorrect(option === question.correctOption);
-    onResult(option === question.correctOption);
+    const correct = option === question.correctOption;
+    setIsAnswerCorrect(correct);
+    onAnswered(correct); // Asegúrate de llamar a la función onAnswered con true o false
   };
 
   const handleOkClick = () => {
@@ -127,8 +119,8 @@ const Question = ({ onResult }) => {
           {/* Componente de retroalimentación */}
           {showFeedback && <Feedback onClose={handleCloseFeedback} />}
         </div>
-        </div>
-        </div>
+      </div>
+    </div>
   );
 };
 
