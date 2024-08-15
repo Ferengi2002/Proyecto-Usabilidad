@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import SuggestionsForm from './SuggestionsForm';
-import ErrorReportForm from './ErrorReportForm';
-import logoImage from '../assets/images/logo.png';
 import SubHeader from './SubHeader';
 import Roulette from './Roulette';
 import Question from './Question';
@@ -55,6 +52,7 @@ const SecondScreen = () => {
         setShowRoulette(false);
         // Cuando se cierra la ruleta, se puede navegar aqui a otro componente
     };
+
     // Para que se muestre nuevamente la ruleta
     const showRouletteAgain = () => {
       setShowRoulette(true);
@@ -91,9 +89,12 @@ const SecondScreen = () => {
             </div>
             </div>
             {/* {showRoulette && <Roulette onClose={handleClose} />} */}
-                {/* Puedes agregar aquí otros componentes o lógica para mostrar 
-                cuando la ruleta esté cerrada */}
-            <Instructions/>
+            {/* Puedes agregar aquí otros componentes o lógica para mostrar 
+            cuando la ruleta esté cerrada */}
+            <Instructions />
+            
+            {/* Componente para mostrar la pregunta cargada */}
+            <Question />
         </div>
     );
 };
